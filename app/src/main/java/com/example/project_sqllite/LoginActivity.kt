@@ -20,15 +20,21 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         dbHelper = databaseHelper(this)
-        binding.button.setOnClickListener {
-            val username = binding.etUsername.text.toString()
-            val password = binding.etPassword.text.toString()
 
-            loginDatabase(username, password)
-        }
-
-        binding.textView5.setOnClickListener{
+        if(dbHelper.isUserTableEmpty()){
             startActivity(Intent(this, RegisterActivity::class.java))
+            finish()
+        }else{
+            binding.button.setOnClickListener {
+                val username = binding.etUsername.text.toString()
+                val password = binding.etPassword.text.toString()
+
+                loginDatabase(username, password)
+            }
+
+            binding.textView5.setOnClickListener{
+                startActivity(Intent(this, RegisterActivity::class.java))
+            }
         }
     }
 

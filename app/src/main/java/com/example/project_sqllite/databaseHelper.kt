@@ -52,4 +52,13 @@ class databaseHelper(private val context: Context):
         cursor.close()
         return userExists
     }
+
+    fun isUserTableEmpty(): Boolean {
+        val db = readableDatabase
+        val cursor = db.rawQuery("SELECT COUNT(*) FROM $TABLE_NAME", null)
+        cursor.moveToFirst()
+        val count = cursor.getInt(0)
+        cursor.close()
+        return count == 0
+    }
 }
