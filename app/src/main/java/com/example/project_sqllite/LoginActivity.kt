@@ -49,7 +49,6 @@ class LoginActivity : AppCompatActivity() {
         if(userExists){
             Toast.makeText(this, "Login Successfully!", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, MainActivity::class.java))
-            finish()
         }else{
             MaterialAlertDialogBuilder(this)
                 .setTitle("Login Failed")
@@ -64,7 +63,4 @@ class LoginActivity : AppCompatActivity() {
     private fun showError(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-
-
-
 }

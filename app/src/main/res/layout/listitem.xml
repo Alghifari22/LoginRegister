@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listitemoutline"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titel Notes"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="18sp"
+            android:textColor="@color/orange"/>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:text="Ini adalah content" />
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginStart="270dp"
+            app:srcCompat="@drawable/baseline_edit_note_24" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginStart="330dp"
+            app:srcCompat="@drawable/baseline_clear_24" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
